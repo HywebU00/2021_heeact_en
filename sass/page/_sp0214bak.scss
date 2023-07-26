@@ -1,0 +1,131 @@
+.sp{
+	margin: 1em -15px;
+	clear: both;	
+}
+.introduction {
+
+	.photo {
+		@include make-xs-column(12);
+		@include make-sm-column(4);
+		@include make-md-column(3);
+		@include make-lg-column(3);
+		@include box-sizing();
+		img{
+			width:100%;
+		}
+		p{
+			text-align: center;
+			font-size: .9em;
+			font-weight: bold;
+			margin: 0.3em 0 1em;
+			// letter-spacing:0.5em;
+			color:#333;
+		}
+	}
+	.intlist {
+		@include make-xs-column(12);
+		@include make-sm-column(8);
+		@include make-md-column(9);
+		@include make-lg-column(9);
+		@include box-sizing();
+		table{
+			th{
+				width: 30%;
+				text-align: right;
+			}
+			margin-bottom: 2em;
+		}
+	}
+}
+.sp-evaluation{
+	text-align: center;
+	h3{
+		display: inline-block;
+		margin: 1em auto;
+		border: solid 1px #838383;
+		padding: .5em 3em;
+		color:#333434;
+		@include screen('mobile') {
+			padding: .5em 1em;	
+		}
+	}
+	.result{
+		ul{
+			list-style: none;
+			margin: 0 auto;
+			padding: 0;
+			li{
+				@include box-sizing();
+				display: inline-block;
+				background: #ececec;
+				margin: 3px 1px;
+				padding: 1em .3em;
+				vertical-align: top;
+				width:18%;
+				@include screen('mobile') {
+					width:36%;
+				}
+				p{
+					height: 3em;
+					overflow: hidden;
+					margin: 0;
+				}
+				span{
+					display: block;
+				}
+				.pass{
+					color:#0083d8;
+				}
+				.con-pass{
+					color:#6b5ab4;
+				}
+			}
+		}
+	}
+	.papers{
+		margin: 1em;
+		ul{
+			margin: 0 10%;
+			padding: 0;
+			list-style: none;
+			text-align: center;
+
+			li{
+				display: inline-block;
+				width: 13em;
+
+				a{
+					background: #0095e2 url('../images/papers_libg.png')no-repeat right;
+					background-size: 48px auto;
+					margin: 1% 1% 8px 1%;
+					padding: 1em 48px 1em 1em;
+					display: block;
+					color: #fff;
+					text-align: left;					
+				}
+
+				&:nth-child(2) a{
+					background: #01cdd0 url('../images/papers_libg.png')no-repeat right;
+					background-size: 48px auto;
+				}
+				&:nth-child(3) a{
+					background: #6663b2 url('../images/papers_libg.png')no-repeat right;
+					background-size: 48px auto;
+				}
+			}
+		}
+		@include screen('mobile') {
+			ul{
+				margin: 0 auto;
+
+				li{
+					display: block;
+					width: 100%;
+					a{
+						margin: 1% auto;
+					}
+				}
+			}   
+		}
+	}
+}
